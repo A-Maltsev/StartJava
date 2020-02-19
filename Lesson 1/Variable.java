@@ -1,4 +1,4 @@
-public class Variable{
+public class Variable {
 	public static void main(String[] args) {
 		byte cores = 4;
 		short processorArchitecture = 64; 
