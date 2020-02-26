@@ -15,8 +15,8 @@ public class Calculator {
 			result *= secondNumber;
 			System.out.println(result);
 		} else if (operation == '/') {
-			float resultDivision;
-			resultDivision = firstNumber / secondNumber;
+			float resultDivision = firstNumber;
+			resultDivision /= secondNumber;
 			System.out.println(resultDivision);
 		} else if (operation == '^') {
 			for (int i = 2; i <= secondNumber; i++) {
