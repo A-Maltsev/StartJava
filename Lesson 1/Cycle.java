@@ -1,6 +1,5 @@
 public class Cycle {
 	public static void main(String[] args) {
-	
 		for (int i = 0; i <= 20; i++) {
 			System.out.println(i);
 		}
@@ -11,15 +10,14 @@ public class Cycle {
 			i -= 2;
 		}
 
-		int summ = 0;
+		int sum = 0;
 		int j = 10;
 		do {
 			if (j % 2 != 0) {
-				summ = summ + j;
+				sum += j;
 			}
 			j++;
 		} while (j <= 20);
-		System.out.println("Сумма " + summ);
-
+		System.out.println("Сумма " + sum);
 	}
 }
