@@ -1,18 +1,17 @@
 public class MyFirstGame {
 	public static void main(String[] args) {
-		boolean isGuess = false;
-		int number = 60;
+		int number = 10;
 		int computerNumber = 20;
 
-		do {
+		while(number != computerNumber) {
 			if (number > computerNumber) {
+				number--;
 				System.out.println("Число больше загаданного");
-			} else if (number < computerNumber) {
-				System.out.println("Число меньше загадонного");
 			} else {
-				System.out.println("Вы угадали");
-				isGuess = true;
+				number++;
+				System.out.println("Число меньше загадонного");
 			}
-		} while(!isGuess);
+		}
+		System.out.println("Вы угадали");
 	}
 }
