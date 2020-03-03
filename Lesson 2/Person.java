@@ -4,7 +4,7 @@ public class Person {
 	String sex = "Male";
 	float height = 1.75f;
 	int weight = 80; 
-	int age = 40;
+	int age = 41;
 	
 	void walk() {
 		System.out.println("Вы идете");
