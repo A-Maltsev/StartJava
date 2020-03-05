@@ -18,8 +18,12 @@ public class CalculatorTest {
 
 			calculator.calculation();
 
-			System.out.println("Хотите продолжить? [да/нет]: ");
-			continueCalculate = scan.next();
+			while (true) {
+                System.out.println("Хотите продолжить? [да/нет]: ");
+                continueCalculate = scan.next();
+                if (continueCalculate == "нет") break;
+                if (continueCalculate == "да") break;
+            }
 
 		} while (continueCalculate != "нет");
 
