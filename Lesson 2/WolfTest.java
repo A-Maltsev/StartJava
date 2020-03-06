@@ -7,7 +7,7 @@ public class WolfTest {
 		wolfOne.setName("Bio wolf");
 		wolfOne.setWeight(50);
 		wolfOne.setAge(6);
-	    wolfOne.setColor("Dark grey");
+		wolfOne.setColor("Dark grey");
 
 
 		System.out.println("Пол волка - " + wolfOne.getSex());
