@@ -21,10 +21,9 @@ public class CalculatorTest {
 			while (true) {
 				System.out.println("Хотите продолжить? [да/нет]: ");
 				continueCalculate = scan.next();
-				if (continueCalculate == "нет") break;
-				if (continueCalculate == "да") break;
+				if (continueCalculate.equals("нет")) break;
+				if (continueCalculate.equals("да")) break;
 			}
-
-		} while (continueCalculate != "нет");
+		} while (!continueCalculate.equals("нет"));
 	}
 }
