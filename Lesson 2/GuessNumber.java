@@ -4,13 +4,8 @@ public class GuessNumber {
     Random random = new Random();
 
     private int computerNumber = random.nextInt(100);
-    private int playerNumber;
 
-    public void setPlayerNumber(int playerNumber) {
-        this.playerNumber = playerNumber;
-    }
-
-    public boolean getWin() {
+    public boolean getWin(int playerNumber) {
         if (computerNumber > playerNumber) {
             System.out.println("Ваше число меньше загаданного.");
             return false;

@@ -19,15 +19,13 @@ public class GuessNumberTest {
             GuessNumber guessNumber = new GuessNumber();
             do {
                 System.out.println("Игрок " + playerOne.getName() + ", введите число от 1 до 100");
-                guessNumber.setPlayerNumber(scanner.nextInt());
-                if (guessNumber.getWin()) {
+                if (guessNumber.getWin(playerOne.getNumber())) {
                     System.out.println("Игрок " + playerOne.getName() + " выиграл!");
                     break;
                 }
 
                 System.out.println("Игрок " + playerTwo.getName() + ", введите число от 1 до 100");
-                guessNumber.setPlayerNumber(scanner.nextInt());
-                if (guessNumber.getWin()) {
+                if (guessNumber.getWin(playerTwo.getNumber())) {
                     System.out.println("Игрок " + playerTwo.getName() + " выиграл!");
                     break;
                 }
