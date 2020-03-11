@@ -1,7 +1,6 @@
 public class JaegerTest{
 	public static void main(String[] args) {
 		Jaeger jaegerOne = new Jaeger();
-		Jaeger jaegerTwo = new Jaeger();
 
 		jaegerOne.setLaunched("2015");
 		jaegerOne.setMark("Mark-1");
@@ -13,16 +12,6 @@ public class JaegerTest{
 		jaegerOne.setStrength(10);
 		jaegerOne.setArmor(10);
 
-		jaegerTwo.setLaunched("December 6, 2015");
-		jaegerTwo.setMark("Mark-1");
-		jaegerTwo.setStatus("Destroyed");
-		jaegerTwo.setOrigin("Japan");
-		jaegerTwo.setHeight(74.37f);
-		jaegerTwo.setWeight(7.450f);
-		jaegerTwo.setSpeed(8);
-		jaegerTwo.setStrength(7);
-		jaegerTwo.setArmor(3);
-
 		System.out.println("Jaeger One Launched - " + jaegerOne.getLaunched());
 		System.out.println("Jaeger One Mark - " + jaegerOne.getMark());
 		System.out.println("Jaeger One Status - " + jaegerOne.getStatus());
@@ -33,6 +22,24 @@ public class JaegerTest{
 		System.out.println("Jaeger One Strength - " + jaegerOne.getStrength());
 		System.out.println("Jaeger One Armor - " + jaegerOne.getArmor());
 
+		jaegerOne.setSpeed(5);
+		System.out.println("Jaeger One Change Speed - " + jaegerOne.getSpeed());
+		jaegerOne.setStrength(15);
+		System.out.println("Jaeger One Change Strength - " + jaegerOne.getStrength());
+		
+
+		Jaeger jaegerTwo = new Jaeger();
+		
+		jaegerTwo.setLaunched("December 6, 2015");
+		jaegerTwo.setMark("Mark-1");
+		jaegerTwo.setStatus("Destroyed");
+		jaegerTwo.setOrigin("Japan");
+		jaegerTwo.setHeight(74.37f);
+		jaegerTwo.setWeight(7.450f);
+		jaegerTwo.setSpeed(8);
+		jaegerTwo.setStrength(7);
+		jaegerTwo.setArmor(3);
+
 		System.out.println("Jaeger Two Launched - " + jaegerTwo.getLaunched());
 		System.out.println("Jaeger Two Mark - " + jaegerTwo.getMark());
 		System.out.println("Jaeger Two Status - " + jaegerTwo.getStatus());
@@ -42,5 +49,10 @@ public class JaegerTest{
 		System.out.println("Jaeger Two Speed - " + jaegerTwo.getSpeed());
 		System.out.println("Jaeger Two Strength - " + jaegerTwo.getStrength());
 		System.out.println("Jaeger Two Armor - " + jaegerTwo.getArmor());
+
+		jaegerTwo.setStrength(10);
+		System.out.println("Jaeger Two Change Strength - " + jaegerTwo.getStrength());
+		jaegerTwo.setArmor(5);
+		System.out.println("Jaeger Two Change Armor - " + jaegerTwo.getArmor());
 	}
 }
