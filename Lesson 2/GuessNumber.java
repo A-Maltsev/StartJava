@@ -17,24 +17,25 @@ public class GuessNumber {
 
     public void startGame() {
         do {
-            if (game(playerOne.getName())) {
+            if (game(playerOne)) {
                 System.out.println("Игрок " + playerOne.getName() + " выиграл!");
                 break;
             }
-            if (game(playerTwo.getName())) {
+            if (game(playerTwo)) {
                 System.out.println("Игрок " + playerTwo.getName() + " выиграл!");
                 break;
             }
         } while (true);
     }
 
-    private boolean game(String playerName) {
-        System.out.println("Игрок " + playerName + ", введите число от 1 до 100");
+    private boolean game(Player player) {
+        System.out.println("Игрок " + player.getName() + ", введите число от 1 до 100");
         int playerNumber = scanner.nextInt();
-        if (computerNumber > playerNumber) {
+        player.setNumber(playerNumber);
+        if (computerNumber > player.getNumber()) {
             System.out.println("Ваше число меньше загаданного.");
             return false;
-        } else if (computerNumber < playerNumber) {
+        } else if (computerNumber < player.getNumber()) {
             System.out.println("Ваше число больше загаданного.");
             return false;
         } else {
