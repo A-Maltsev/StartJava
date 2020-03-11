@@ -14,7 +14,6 @@ public class GuessNumber {
     }
 
     private int computerNumber = random.nextInt(100);
-    int playerNumber;
 
     public void startGame() {
         do {
@@ -31,7 +30,7 @@ public class GuessNumber {
 
     private boolean game(String playerName) {
         System.out.println("Игрок " + playerName + ", введите число от 1 до 100");
-        playerNumber = scanner.nextInt();
+        int playerNumber = scanner.nextInt();
         if (computerNumber > playerNumber) {
             System.out.println("Ваше число меньше загаданного.");
             return false;
