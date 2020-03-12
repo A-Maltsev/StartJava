@@ -19,12 +19,7 @@ public class GuessNumberTest {
             do {
                 System.out.println("Хотите продолжить? [да/нет]: ");
                 continuePlay = scanner.next();
-                if (continuePlay.equals("да")) {
-                    break;
-                } else if (continuePlay.equals("нет")) {
-                    break;
-                }
-            } while (true);
+            } while (!continuePlay.equals("да") && !continuePlay.equals("нет"));
         } while (!continuePlay.equals("нет"));
     }
 }

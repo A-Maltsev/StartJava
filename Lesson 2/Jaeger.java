@@ -10,52 +10,40 @@ public class Jaeger {
 	private int strength;
 	private int armor;
 
-	public String getLaunched() {
-		return launched;
+	public Jaeger(String launched, String mark, String status, String origin, float height, float weight, int speed, int strength, int armor) {
+		this.launched = launched;
+		this.mark = mark;
+		this.status = status;
+		this.origin = origin;
+		this.height = height;
+		this.weight = weight;
+		this.speed = speed;
+		this.strength = strength;
+		this.armor = armor;
 	}
 
-	public void setLaunched(String launched) {
-		this.launched = launched;
+	public String getLaunched() {
+		return launched;
 	}
 
 	public String getMark() {
 		return mark;
 	}
 
-	public void setMark(String mark) {
-		this.mark = mark;
-	}
-
 	public String getStatus() {
 		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
 	}
 
 	public String getOrigin() {
 		return origin;
 	}
 
-	public void setOrigin(String origin) {
-		this.origin = origin;
-	}
-
 	public float getHeight() {
 		return height;
 	}
 
-	public void setHeight(float height) {
-		this.height = height;
-	}
-
 	public float getWeight() {
 		return weight;
-	}
-
-	public void setWeight(float weight) {
-		this.weight = weight;
 	}
 
 	public int getSpeed() {
