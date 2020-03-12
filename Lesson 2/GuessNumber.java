@@ -17,29 +17,27 @@ public class GuessNumber {
 
     public void startGame() {
         do {
-            if (isGuess(playerOne)) {
+            if (makeMove(playerOne)) {
                 System.out.println("Игрок " + playerOne.getName() + " выиграл!");
                 break;
             }
-            if (isGuess(playerTwo)) {
+            if (makeMove(playerTwo)) {
                 System.out.println("Игрок " + playerTwo.getName() + " выиграл!");
                 break;
             }
         } while (true);
     }
 
-    private boolean isGuess(Player player) {
+    private boolean makeMove(Player player) {
         inputNumber(player);
         if (compNumber == player.getNumber()) {
             return true;
+        } else if (compNumber > player.getNumber()) {
+            System.out.println("Ваше число меньше загаданного.");
         } else {
-            if (compNumber > player.getNumber()) {
-                System.out.println("Ваше число меньше загаданного.");
-            } else {
-                System.out.println("Ваше число больше загаданного.");
-            }
-            return false;
+            System.out.println("Ваше число больше загаданного.");
         }
+        return false;
     }
 
     private void inputNumber(Player player) {
