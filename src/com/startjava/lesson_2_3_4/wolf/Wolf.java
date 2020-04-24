@@ -1,7 +1,7 @@
-package com.startjava.lesson_2_3.wolf;
+package com.startjava.lesson_2_3_4.wolf;
 
 public class Wolf {
-	
+
 	private String sex;
 	private String name;
 	private int weight;

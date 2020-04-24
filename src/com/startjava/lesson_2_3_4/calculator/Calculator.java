@@ -1,4 +1,6 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
+
+import java.lang.Math;
 
 public class Calculator {
 	private char operation;
@@ -36,17 +38,13 @@ public class Calculator {
 				System.out.println("Результат: " + (firstNumber / secondNumber));
 				break;
 			case '^':
-				int result = 1;	
-				for (int i = 1; i <= secondNumber; i++) {
-					result *= firstNumber;
-				}
-				System.out.println("Результат: " + result);	
+				System.out.println("Результат: " + Math.pow(firstNumber, secondNumber));
 				break;
 			case '%':
 				System.out.println("Результат: " + (firstNumber % secondNumber));
-				break;	
+				break;
 			default:
-				System.out.println("Не верный знак математической операции.");		
+				System.out.println("Не верный знак математической операции.");
 		}
 	}
 
