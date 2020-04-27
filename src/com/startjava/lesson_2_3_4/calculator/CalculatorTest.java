@@ -4,28 +4,21 @@ import java.util.Scanner;
 
 public class CalculatorTest {
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in);
 		Calculator calculator = new Calculator();
-		String continueCalculate;
 
-		do {
+		String answer = "да";
+		while (answer.equals("да")) {
+
 			System.out.print("Введите математическое выражение: ");
-			String mathExpression = scan.nextLine();
+			String mathExpression = scanner.nextLine();
+			calculator.calculation(mathExpression);
 
-			String[] massMathExpression = mathExpression.split(" ");
-
-			calculator.setFirstNumber(Integer.parseInt(massMathExpression[0]));
-			calculator.setOperation(massMathExpression[1].charAt(0));
-			calculator.setSecondNumber(Integer.parseInt(massMathExpression[2]));
-
-			calculator.calculation();
-
-			while (true) {
-				System.out.println("Хотите продолжить? [да/нет]: ");
-				continueCalculate = scan.next();
-				if (continueCalculate.equals("нет")) break;
-				if (continueCalculate.equals("да")) break;
-			}
-		} while (!continueCalculate.equals("нет"));
+			do {
+				System.out.print("Хотите продолжить? [да/нет]: ");
+				answer = scanner.next();
+			} while (!answer.equals("да") && !answer.equals("нет"));
+			scanner.nextLine();
+		}
 	}
 }

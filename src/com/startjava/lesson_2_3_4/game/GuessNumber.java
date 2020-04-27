@@ -1,6 +1,5 @@
 package com.startjava.lesson_2_3_4.game;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -13,12 +12,9 @@ public class GuessNumber {
     private final Player playerOne;
     private final Player playerTwo;
 
-    private int[] playerNumbers;
-
-    public GuessNumber(Player playerOne, Player playerTwo, int[] playerNumbers) {
+    public GuessNumber(Player playerOne, Player playerTwo) {
         this.playerOne = playerOne;
         this.playerTwo = playerTwo;
-        this.playerNumbers = playerNumbers;
     }
 
     public void startGame() {
@@ -52,26 +48,21 @@ public class GuessNumber {
     }
 
     private void fillPlayers() {
-        int[] playerNumbers;
-        playerNumbers = playerOne.getNumbers();
-        Arrays.fill(playerNumbers, 0, playerOne.getAttempt(), 0);
-        playerOne.setNumbers(playerNumbers);
+        playerOne.fillNumbers();
         playerOne.setAttempt(0);
 
-        playerNumbers = playerTwo.getNumbers();
-        Arrays.fill(playerNumbers, 0, playerTwo.getAttempt(), 0);
-        playerTwo.setNumbers(playerNumbers);
+        playerTwo.fillNumbers();
         playerTwo.setAttempt(0);
     }
 
     private void printMessage(Player playerOne, Player playerTwo) {
         System.out.print("Числа названные игроком " + playerOne.getName() + ": ");
-        for (int number : Arrays.copyOf(playerOne.getNumbers(), playerOne.getAttempt())) {
+        for (int number : playerOne.getNumbers()) {
             System.out.print(number + " ");
         }
         System.out.println();
         System.out.print("Числа названные игроком " + playerTwo.getName() + ": ");
-        for (int number : Arrays.copyOf(playerTwo.getNumbers(), playerTwo.getAttempt())) {
+        for (int number : playerTwo.getNumbers()) {
             System.out.print(number + " ");
         }
         System.out.println();
@@ -93,13 +84,10 @@ public class GuessNumber {
 
         int attemptPlayer = player.getAttempt();
 
-        playerNumbers = player.getNumbers();
         System.out.print("Игрок " + player.getName() + ", введите число от 1 до 100: ");
         int playerNumber = scanner.nextInt();
-        playerNumbers[attemptPlayer] = playerNumber;
         player.setNumber(playerNumber);
-        player.setNumbers(playerNumbers);
+        player.setPlayerNumbers(playerNumber);
         player.setAttempt(attemptPlayer + 1);
-
     }
 }

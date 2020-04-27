@@ -1,15 +1,15 @@
 package com.startjava.lesson_2_3_4.game;
 
+import java.util.Arrays;
+
 public class Player {
 	private final String name;
 	private int number;
-	private int[] numbers;
-	private int attempt;
+	private final int[] numbers = new int[10];
+	private int attempt = 0;
 
-	public Player(String name, int[] numbers, int attempt) {
+	public Player(String name) {
 		this.name = name;
-		this.numbers = numbers;
-		this.attempt = attempt;
 	}
 
 	public String getName() {
@@ -25,11 +25,15 @@ public class Player {
 	}
 
 	public int[] getNumbers() {
-		return numbers;
+		return Arrays.copyOf(numbers, this.attempt);
 	}
 
-	public void setNumbers(int[] numbers) {
-		this.numbers = numbers;
+	public void setPlayerNumbers(int numbers) {
+		this.numbers[attempt] = numbers;
+	}
+
+	public void fillNumbers() {
+		Arrays.fill(this.numbers, 0, this.attempt, 0);
 	}
 
 	public void setAttempt(int attempt) {

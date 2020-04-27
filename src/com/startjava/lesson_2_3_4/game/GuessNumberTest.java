@@ -10,20 +10,22 @@ public class GuessNumberTest {
 
         System.out.print("Имя первого игрока: ");
         String firstPlayerName = scanner.nextLine();
-        Player playerOne = new Player(firstPlayerName, new int[10], 0);
+        Player playerOne = new Player(firstPlayerName);
         System.out.print("Имя второго игрока: ");
         String secondPlayerName = scanner.nextLine();
-        Player playerTwo = new Player(secondPlayerName, new int[10], 0);
+        Player playerTwo = new Player(secondPlayerName);
 
-        String continuePlay;
+        String answer = "да";
+        while (answer.equals("да")) {
 
-        do {
-            GuessNumber guessNumber = new GuessNumber(playerOne, playerTwo, new int[10]);
+            GuessNumber guessNumber = new GuessNumber(playerOne, playerTwo);
             guessNumber.startGame();
+
             do {
                 System.out.print("Хотите продолжить? [да/нет]: ");
-                continuePlay = scanner.next();
-            } while (!continuePlay.equals("да") && !continuePlay.equals("нет"));
-        } while (!continuePlay.equals("нет"));
+                answer = scanner.next();
+            } while (!answer.equals("да") && !answer.equals("нет"));
+            scanner.nextLine();
+        }
     }
 }
