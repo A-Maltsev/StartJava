@@ -25,15 +25,15 @@ public class Player {
 	}
 
 	public int[] getNumbers() {
-		return Arrays.copyOf(numbers, this.attempt);
+		return Arrays.copyOf(numbers, attempt);
 	}
 
-	public void setPlayerNumbers(int numbers) {
-		this.numbers[attempt] = numbers;
+	public void setPlayerNumbers(int number) {
+		numbers[attempt] = number;
 	}
 
 	public void fillNumbers() {
-		Arrays.fill(this.numbers, 0, this.attempt, 0);
+		Arrays.fill(numbers, 0, attempt, 0);
 	}
 
 	public void setAttempt(int attempt) {
