@@ -9,7 +9,6 @@ public class CalculatorTest {
 
 		String answer = "да";
 		while (answer.equals("да")) {
-
 			System.out.print("Введите математическое выражение: ");
 			String mathExpression = scanner.nextLine();
 			calculator.calculation(mathExpression);

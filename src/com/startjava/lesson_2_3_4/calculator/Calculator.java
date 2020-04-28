@@ -1,12 +1,10 @@
 package com.startjava.lesson_2_3_4.calculator;
 
 import java.lang.Math;
-import java.util.Arrays;
 
 public class Calculator {
 
 	public void calculation(String mathExpression) {
-
 		String[] splitMathExpression = mathExpression.split(" ");
 
 		switch(splitMathExpression[1].charAt(0)) {

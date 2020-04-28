@@ -17,7 +17,6 @@ public class GuessNumberTest {
 
         String answer = "да";
         while (answer.equals("да")) {
-
             GuessNumber guessNumber = new GuessNumber(playerOne, playerTwo);
             guessNumber.startGame();
 
