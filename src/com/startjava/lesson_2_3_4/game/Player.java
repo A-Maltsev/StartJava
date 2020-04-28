@@ -15,7 +15,7 @@ public class Player {
 		return name;
 	}
 
-	public int getPlayerNumber(int attempt) {
+	public int getNumber(int attempt) {
 		return numbers[attempt - 1];
 	}
 
@@ -23,7 +23,7 @@ public class Player {
 		return Arrays.copyOf(numbers, attempt);
 	}
 
-	public void setPlayerNumbers(int number) {
+	public void setNumber(int number) {
 		numbers[attempt] = number;
 	}
 
