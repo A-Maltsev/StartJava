@@ -41,7 +41,7 @@ public class GuessNumber {
         } while (true);
         printEnteredNumbers(playerOne);
         printEnteredNumbers(playerTwo);
-        fillPlayers();
+        setDefaultValues();
     }
 
     private boolean makeMove(Player player) {
@@ -75,7 +75,7 @@ public class GuessNumber {
         System.out.println();
     }
 
-    private void fillPlayers() {
+    private void setDefaultValues() {
         playerOne.fillNumbers();
         playerOne.setAttempt(0);
 
